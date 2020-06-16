@@ -1,4 +1,7 @@
-const Person = require('./person.js');
-const person1 = new Person("John",30);
+const Logger = require('./logger.js');
 
-console.log(person1);
+logger = new Logger();
+logger.on('message',(data) => console.log("Logging: ",data));
+
+logger.log('hello');
+logger.log('hi');
