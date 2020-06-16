@@ -17,11 +17,42 @@ const path = require('path');
 //     console.log('File is written');
 // });
 
-fs.readFile(
-    path.join(__dirname,'test','note.txt'),
-    'utf8',
-    (err,data) => {
+// fs.readFile(
+//     path.join(__dirname,'test','note.txt'),
+//     'utf8',
+//     (err,data) => {
+//         if(err) throw err;
+//         console.log(data);
+//     }
+// );
+
+fs.rename(
+    path.join(__dirname,'test','hello.txt'),
+    path.join(__dirname,'test','file.txt'),
+    err => {
         if(err) throw err;
-        console.log(data);
+        console.log('File renamed');
     }
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
